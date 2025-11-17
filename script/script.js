@@ -36,6 +36,7 @@ function setupFormValidation() {
         selectedDate.setHours(0, 0, 0, 0);
         return selectedDate >= today;
     };
+    
     const validateSelect = (value) => value !== "";
     const validateRadio = (name) => document.querySelector(`input[name="${name}"]:checked`) !== null;
 
