@@ -1,16 +1,3 @@
-//Controle de menu
-function setupMenu() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.getElementById('navList');
-    if (navToggle && navList) {
-        navToggle.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            const isExpanded = navList.classList.contains('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-        });
-    }
-}
-
 // Valida formulario 
 function setupFormValidation() {
     const form = document.getElementById('reservationForm');
@@ -173,9 +160,7 @@ function setupGetParams() {
         'escorregador': 'Super Escorregador',
         'piscina': 'Piscina de Bolinhas',
         'combo': 'Combo Atividades',
-        'combo2': 'Combo Atividades 2',
-        'touro': 'Touro Mecânico',
-        'guerra': 'Guerra de Cotonetes'
+        'combo2': 'Combo Atividades 2'
     };
 
     const periodMap = {
@@ -214,10 +199,36 @@ function setupAutoFillToy() {
     }
 }
 
-// Inicializa todas as funções que devem rodar ao carregar a página
+function toggleAuthorInfo(authorNum) {
+    const details = document.getElementById(`details${authorNum}`);
+    const button = event.target;
+    
+    if (details && button) {
+        if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+            button.textContent = 'Ocultar Detalhes';
+            button.style.backgroundColor = '#a58326';
+        } else {
+            details.style.display = 'none';
+            button.textContent = 'Ver Detalhes';
+            button.style.backgroundColor = '';
+        }
+    }
+}
+
+
+function setupAboutPage() {
+    for (let i = 1; i <= 3; i++) {
+        const details = document.getElementById(`details${i}`);
+        if (details) {
+            details.style.display = 'none';
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    setupMenu();
     setupFormValidation();
     setupGetParams();
     setupAutoFillToy();
+    setupAboutPage();
 });

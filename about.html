@@ -26,9 +26,59 @@
         </aside>
 
         <main class="main-content-column">
-            <h2>Sobre a Inflatoy!</h2>
+            <h2>Sobre o Trabalho</h2>
+            
+            <div class="card card-sidebar-style about-card">
+                <div class="card-body">
+                    <h3>Atividade Somativa 1</h3>
+                    <p>Este site foi desenvolvido como parte da <strong>Atividade Somativa 1</strong> da disciplina de Desenvolvimento Web Front-End.</p>
+                    <p>O projeto demonstra o uso exclusivo de <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong> puro, sem utilização de frameworks ou bibliotecas externas.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 30px;">Sobre a Inflatoy</h2>
             <p>Nós somos dedicados a levar diversão segura e inesquecível para todas as festas infantis. Nosso compromisso é com a qualidade e a alegria dos seus filhos.</p>
-            <p>Se tiver dúvidas, use nossa página de Contato!</p>
+            <p>Se tiver dúvidas, use nossa página de <a href="form.html" class="about-link">Contato</a>!</p>
+
+            <h2 style="margin-top: 30px;">Autores</h2>
+            <div class="authors-container">
+                <div class="author-card">
+                    <h3>Lucas Soares Cardoso</h3>
+                    <p class="author-course">Inteligência Artificial Aplicada</p>
+                    <button class="btn-toggle-info" onclick="toggleAuthorInfo(1)">Ver Detalhes</button>
+                    <div class="author-details" id="details1">
+                        <p>Desenvolvedor responsável pela explicação do código e gravação do vídeo</p>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <h3>Samuel Gustavo de Lima</h3>
+                    <p class="author-course">Análise e Desenvolvimento de Sistemas</p>
+                    <button class="btn-toggle-info" onclick="toggleAuthorInfo(2)">Ver Detalhes</button>
+                    <div class="author-details" id="details2">
+                        <p>Desenvolvedor responsável pelos testes e validações do código e requisitos do projeto</p>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <h3>Victor Hugo Guedes Pirozzi</h3>
+                    <p class="author-course">Análise e Desenvolvimento de Sistemas</p>
+                    <button class="btn-toggle-info" onclick="toggleAuthorInfo(3)">Ver Detalhes</button>
+                    <div class="author-details" id="details3">
+                        <p>Desenvolvedor responsável pela estruturação do código</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-demo" style="margin-top: 40px;">
+                <h2>Demonstração de Tecnologias</h2>
+                <p>Esta página demonstra o uso de:</p>
+                <ul class="tech-list">
+                    <li><strong>HTML5:</strong> Estrutura semântica com elementos como <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+                    <li><strong>CSS3:</strong> Estilização com classes reutilizáveis, Flexbox, Grid e variáveis CSS</li>
+                    <li><strong>JavaScript:</strong> Interatividade dinâmica com manipulação do DOM (veja os botões acima)</li>
+                </ul>
+            </div>
         </main>
     </div>
 
