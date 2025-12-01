@@ -1,0 +1,801 @@
+/* ============================================
+   PALETA DE CORES - DESIGN MODERNO E ELEGANTE
+   ============================================ */
+:root {
+    --color-primary: #F5D76E;      /* Amarelo pastoso */
+    --color-primary-dark: #E8C84A; /* Amarelo mais escuro */
+    --color-primary-light: #F9E79F; /* Amarelo claro */
+    --color-secondary: #6C757D;     /* Cinza */
+    --color-accent: #44CEF3;       /* Azul claro (accent) */
+    --color-danger: #EF7462;       /* Vermelho coral */
+    
+    --color-bg: #FFFFFF;            /* Branco */
+    --color-bg-light: #F8F9FA;     /* Cinza muito claro */
+    --color-bg-gray: #E9ECEF;      /* Cinza claro */
+    --color-text: #212529;         /* Preto suave */
+    --color-text-muted: #6C757D;   /* Cinza texto */
+    --color-border: #DEE2E6;       /* Cinza borda */
+    
+    --color-footer: #1A1A1A;       /* Preto fosco */
+    
+    --border-radius: 8px;
+    --border-radius-sm: 4px;
+    --padding-xs: 4px;
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+    --padding-xl: 32px;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg-light);
+    padding-bottom: 80px; /* Espaço para footer fixo */
+}
+
+/* ============================================
+   UTILITÁRIOS
+   ============================================ */
+.text-capitalize-words {
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.rounded-custom {
+    border-radius: var(--border-radius) !important;
+}
+
+.rounded-custom-sm {
+    border-radius: var(--border-radius-sm) !important;
+}
+
+.divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: var(--padding-lg) 0;
+    border: none;
+}
+
+.divider-thick {
+    height: 2px;
+    background: var(--color-border);
+    margin: var(--padding-xl) 0;
+}
+
+/* ============================================
+   NAVBAR MODERNA
+   ============================================ */
+.navbar {
+    background: var(--color-bg) !important;
+    box-shadow: var(--shadow-sm);
+    padding: var(--padding-md) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-toggler {
+    background: var(--color-primary);
+
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-text) !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--color-text) !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin: 0 var(--padding-xs);
+    padding: var(--padding-sm) var(--padding-md) !important;
+    border-radius: var(--border-radius-sm);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-dark) !important;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.btn-login {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    font-weight: 500;
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+    background: var(--color-bg-light);
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-cadastro {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: 1px solid var(--color-primary);
+    font-weight: 600;
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.btn-cadastro:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-text);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.user-menu {
+    color: var(--color-text) !important;
+}
+
+.dropdown-menu {
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: var(--padding-xs);
+    margin-top: var(--padding-sm);
+}
+
+.dropdown-item {
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    background: var(--color-bg);
+    margin-top: -76px;
+    padding-top: 120px !important;
+    padding-bottom: var(--padding-xl) !important;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero-section h1 {
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-section .lead {
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+/* ============================================
+   CARDS ESTILO MODERNO
+   ============================================ */
+.catalog-section {
+    padding: var(--padding-xl) 0;
+    background: var(--color-bg-light);
+}
+
+.card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg-gray);
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+.card-body {
+    padding: var(--padding-lg);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--padding-sm);
+    font-size: 1.1rem;
+    letter-spacing: -0.3px;
+}
+
+.card-text {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+/* ============================================
+   BADGES E TAGS
+   ============================================ */
+.badge {
+    padding: var(--padding-xs) var(--padding-sm);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text) !important;
+}
+
+.bg-success {
+    background-color: #28A745 !important;
+    color: white !important;
+}
+
+.bg-warning {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text) !important;
+}
+
+.bg-danger {
+    background-color: var(--color-danger) !important;
+    color: white !important;
+}
+
+.bg-info {
+    background-color: var(--color-accent) !important;
+    color: white !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+    color: white !important;
+}
+
+/* ============================================
+   BOTÕES MODERNOS
+   ============================================ */
+.btn {
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    letter-spacing: 0.2px;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-text);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #28A745;
+    color: white;
+    border-color: #28A745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border-color: var(--color-primary);
+}
+
+.btn-warning:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: white;
+    border-color: var(--color-danger);
+}
+
+.btn-danger:hover {
+    background-color: #E85A4A;
+    border-color: #E85A4A;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+    border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+    background-color: #5A6268;
+    border-color: #5A6268;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+    background: transparent;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   FORMULÁRIOS MODERNOS
+   ============================================ */
+.form-control,
+.form-select {
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(245, 215, 110, 0.1);
+    outline: none;
+    background: var(--color-bg);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--padding-xs);
+    font-size: 0.9rem;
+}
+
+.form-check {
+    padding: var(--padding-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    background: var(--color-bg);
+}
+
+.form-check:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
+.form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(245, 215, 110, 0.1);
+}
+
+/* ============================================
+   TABELAS MODERNAS
+   ============================================ */
+.table {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+.table thead {
+    background: var(--color-bg-gray);
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.table thead th {
+    padding: var(--padding-md);
+    font-weight: 600;
+    border: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background-color: var(--color-primary-light);
+}
+
+.table tbody td {
+    padding: var(--padding-md);
+    vertical-align: middle;
+    color: var(--color-text);
+}
+
+/* ============================================
+   CARDS DE RESUMO (PAINEL)
+   ============================================ */
+.card.text-white {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.card.text-white:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.card.text-white.bg-primary {
+    background: var(--color-bg) !important;
+    border-left: 4px solid var(--color-primary);
+}
+
+.card.text-white.bg-success {
+    background: var(--color-bg) !important;
+    border-left: 4px solid #28A745;
+}
+
+.card.text-white.bg-info {
+    background: var(--color-bg) !important;
+    border-left: 4px solid var(--color-accent);
+}
+
+.card.text-white.bg-warning {
+    background: var(--color-bg) !important;
+    border-left: 4px solid var(--color-primary);
+}
+
+.card.text-white h3,
+.card.text-white h4 {
+    color: var(--color-text) !important;
+}
+
+.card.text-white p {
+    color: var(--color-text-muted) !important;
+}
+
+/* ============================================
+   ALERTAS MODERNOS
+   ============================================ */
+.alert {
+    padding: var(--padding-md);
+    border-radius: var(--border-radius);
+    border: 1px solid;
+    font-weight: 400;
+    background: var(--color-bg);
+}
+
+.alert-success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border-color: #C3E6CB;
+}
+
+.alert-danger {
+    background-color: #F8D7DA;
+    color: #721C24;
+    border-color: #F5C6CB;
+}
+
+.alert-warning {
+    background-color: var(--color-primary-light);
+    color: #856404;
+    border-color: var(--color-primary);
+}
+
+.alert-info {
+    background-color: #D1ECF1;
+    color: #0C5460;
+    border-color: #BEE5EB;
+}
+
+/* ============================================
+   MODAIS MODERNOS
+   ============================================ */
+.modal-content {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-xl);
+    background: var(--color-bg);
+}
+
+.modal-header {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: var(--padding-lg);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+.modal-body {
+    padding: var(--padding-lg);
+    background: var(--color-bg);
+}
+
+.modal-footer {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: var(--padding-lg);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+/* ============================================
+   FOOTER FIXO
+   ============================================ */
+footer {
+    background: var(--color-footer);
+    color: #FFFFFF;
+    padding: var(--padding-lg) 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: var(--padding-xs);
+    border-radius: var(--border-radius-sm);
+}
+
+footer a:hover {
+    color: var(--color-primary-light);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+/* ============================================
+   PRICE DISPLAY
+   ============================================ */
+.price-display {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    transition: all 0.3s ease;
+}
+
+.card:hover .price-display {
+    color: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 100px !important;
+        padding-bottom: var(--padding-lg) !important;
+    }
+    
+    .card {
+        margin-bottom: var(--padding-md);
+    }
+    
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+    
+    .table-responsive {
+        border-radius: var(--border-radius);
+    }
+    
+    .card-img-wrapper {
+        height: 220px !important;
+    }
+    
+    body {
+        padding-bottom: 100px;
+    }
+}
+
+/* ============================================
+   UTILITÁRIOS ESPECÍFICOS
+   ============================================ */
+.shadow-custom {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-custom-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Cards com borda destacada */
+.card-border-primary {
+    border-left: 4px solid var(--color-primary);
+}
+
+.card-border-accent {
+    border-left: 4px solid var(--color-accent);
+}
+
+/* ============================================
+   SCROLL SUAVE
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-light);
+    border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+/* ============================================
+   SEÇÕES COM DIVISORES
+   ============================================ */
+.section-divider {
+    margin: var(--padding-xl) 0;
+    border: none;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.section-title {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--padding-md);
+    padding-bottom: var(--padding-sm);
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+}
+
+/* ============================================
+   CARDS DE AUTOR (ABOUT)
+   ============================================ */
+.author-card {
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.author-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
